@@ -4,6 +4,7 @@
 /android/
 =======
 .nomedia
+addons/
 
 # Godot-specific ignores
 .import/
