@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://bxd4uqna42sp7"]
+
+[ext_resource type="Texture2D" uid="uid://cpjhvonc3tika" path="res://assets/ball/paddle.svg" id="1_3r78q"]
+[ext_resource type="Script" uid="uid://b7fwg6evuv1xn" path="res://scenes/paddle_1.gd" id="1_4ecxv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ecxv"]
+atlas = ExtResource("1_3r78q")
+region = Rect2(2367, 0, 2367, 250)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gbnow"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ecxv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v1aen"]
+size = Vector2(236, 24.5)
+
+[node name="paddle1" type="CharacterBody2D"]
+collision_layer = 4
+script = ExtResource("1_4ecxv")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_gbnow")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.25)
+shape = SubResource("RectangleShape2D_v1aen")
