@@ -27,4 +27,4 @@ sprite_frames = SubResource("SpriteFrames_exnah")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 position = Vector2(-60.000004, -151)
 scale = Vector2(58.5, 58.5)
-polygon = PackedVector2Array(-7.025642, 10.598291, 9.076924, 10.598291, 9.076924, -6.4957266, 10.97436, 11.1453, -9.017095, 11.215377, -7.025642, -5.7264957)
+polygon = PackedVector2Array(-7.025642, 10.598291, 9.076924, 10.598291, 9.076924, -12.017095, 10.97436, 11.1453, -9.017095, 11.215377, -7.025642, -11.74359)

@@ -1,11 +1,16 @@
-extends CharacterBody2D
-var collisionInfo = CollisionObject2D
-var velo = Vector2()
+extends PhysicsBody2D
+var collisionInfo = KinematicCollision2D
+var veloBall = Vector2()
+var speed = 1
+@onready var walls = $"../walls/CollisionPolygon2D"
+
 
 func _physics_process(delta: float) -> void:
-	velo.y += 1
-	collisionInfo = move_and_collide(velo)
-	
+	veloBall.y += 1
+	collisionInfo = move_and_collide(veloBall)
 	if collisionInfo:
-		velo.y *= -1
-		velo.x *= -1
+		if collisionInfo.get_collider_shape() == walls:
+			veloBall.x *= -0.7
+		else:
+			veloBall.x += collisionInfo.get_collider_velocity().x/50
+			veloBall.y = -40
