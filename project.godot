@@ -45,6 +45,7 @@ TestDelete={
 3d_physics/layer_2="Ball"
 2d_physics/layer_3="paddle"
 3d_physics/layer_3="Paddle"
+2d_physics/layer_4="dead"
 
 [rendering]
 
